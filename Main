@@ -20,7 +20,8 @@
 
     </div>
     <script>
-        // literals
+        
+        <!-- Literals -->
         
         let person = {
             first: "Brad",
@@ -39,7 +40,8 @@
         alert(person.middle());
         
         
-        // constructors
+        <!-- Constructors -->
+        
         function Fruit(name, color, shape) {
             this.name = name;
             this.color = color;
