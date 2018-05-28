@@ -35,22 +35,22 @@ array_flip();
 
 
 
- <!-- Constructors -->
-        
-        function Fruit(name, color, shape) {
-            this.name = name;
-            this.color = color;
-            this.shape = shape;
+<!-- Constructors -->
 
-            this.describe = function() {
-                return 'A ' + this.name + ' is the color ' + this.color + ' and is the shape ' + this.shape;
-            }
-        }
+function Fruit(name, color, shape) {
+    this.name = name;
+    this.color = color;
+    this.shape = shape;
 
-        let apple = new Fruit('apple', 'red', 'round');
-        let banana = new Fruit('banana', 'yellow', 'oval');
+    this.describe = function() {
+        return 'A ' + this.name + ' is the color ' + this.color + ' and is the shape ' + this.shape;
+    }
+}
 
-        alert(apple.describe());
+let apple = new Fruit('apple', 'red', 'round');
+let banana = new Fruit('banana', 'yellow', 'oval');
+
+alert(apple.describe());
 
 
 
