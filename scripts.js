@@ -35,4 +35,23 @@ array_flip();
 
 
 
+ <!-- Constructors -->
+        
+        function Fruit(name, color, shape) {
+            this.name = name;
+            this.color = color;
+            this.shape = shape;
+
+            this.describe = function() {
+                return 'A ' + this.name + ' is the color ' + this.color + ' and is the shape ' + this.shape;
+            }
+        }
+
+        let apple = new Fruit('apple', 'red', 'round');
+        let banana = new Fruit('banana', 'yellow', 'oval');
+
+        alert(apple.describe());
+
+
+
 
