@@ -45,5 +45,8 @@ if(worthAlook){
 
         let apple = new Fruit('apple', 'red', 'round');
         let banana = new Fruit('banana', 'yellow', 'oval');
-
+        let orange = new Fruit('orange', 'orange', 'round');
+        
+        alert(orange.describe());
         alert(apple.describe());
+        
