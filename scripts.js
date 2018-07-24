@@ -37,10 +37,11 @@ array_flip();
 
 <!-- Constructors -->
 
-function Fruit(name, color, shape) {
+function Fruit(name, color, shape, sides) {
     this.name = name;
     this.color = color;
     this.shape = shape;
+    this.sides = sides
 
     this.describe = function() {
         return 'A ' + this.name + ' is the color ' + this.color + ' and is the shape ' + this.shape;
