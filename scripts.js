@@ -51,6 +51,7 @@ function Fruit(name, color, shape, sides) {
 let apple = new Fruit('apple', 'red', 'round');
 let banana = new Fruit('banana', 'yellow', 'oval');
 let orannge = new Fruit('orange', 'orange', 'round');
+let grape = new Fruit('grape', 'purple', 'round');
 
 alert(apple.describe());
 
