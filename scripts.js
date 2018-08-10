@@ -25,7 +25,7 @@ console.log(n);*/
 
 
 function array_flip(){
-    var flip = [1,2,4,3];
+    var flip = [1,2,4,3, 5];
    
     for(var i = 0; i < flip.length; i++){
         return Array.reverse(i);
