@@ -5,7 +5,7 @@ var taxi = {
     color: "yellow",
     passengers: 4,
     convertible: false,
-    mileage: 2381341
+    mileage: 381341
 };
 
 function prequal(car){
