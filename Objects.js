@@ -22,8 +22,10 @@ var worthAlook = prequal(taxi);
 
 if(worthAlook){
     console.log("You gotta check out this " + taxi.make + " " + taxi.model);
-}else{
+}else if{
     console.log("You should really pass on the " + taxi.make + " " + taxi.model);
+}else{
+    console.log("you dont have nothing")
 }
 
 
