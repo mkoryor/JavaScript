@@ -9,10 +9,10 @@ function count(str){
     return obj
 }  
 
-// console.log(count("hello hey"));
+console.log(count("hello hey"));
 
 
-/*url = "";
+url = "";
 if (url == ""){
     console.log("yes");
 }
@@ -21,7 +21,7 @@ else{
 }
 
 n = url == "" ? "no" : url;
-console.log(n);*/
+console.log(n);
 
 
 function array_flip(){
