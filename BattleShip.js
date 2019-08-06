@@ -123,7 +123,7 @@ var controller = {
 			this.guesses++;
 			var hit = model.fire(location);
 			if (hit && model.shipsSunk === model.numShips) {
-					view.displayMessage("You sank all my battleships, in " + this.guesses + " guesses");
+				view.displayMessage("You sank all my battleships, in " + this.guesses + " guesses");
 			}
 		}
 	}
@@ -168,9 +168,6 @@ function handleFireButton() {
 
 function handleKeyPress(e) {
 	var fireButton = document.getElementById("fireButton");
-
-	// in IE9 and earlier, the event object doesn't get passed
-	// to the event handler correctly, so we use window.event instead.
 	e = e || window.event;
 
 	if (e.keyCode === 13) {
@@ -179,8 +176,6 @@ function handleKeyPress(e) {
 	}
 }
 
-
-// init - called when the page has completed loading
 
 window.onload = init;
 
