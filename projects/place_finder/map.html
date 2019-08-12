@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title> Place Searcher </title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        #map {
+            border: 2px solid #333;
+            width: 80vw;
+            height: 80vh;
+        }
+        input #mapsearch{
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="mapsearch" size="50">
+    <div id="map"></div>
+    <script>
+    let map;
+    let market
+
+    document.addEventListener("DOMContentLoaded", () => {
+        let s = document.createElement("script");
+        s.src = `https://maps.googleapis.com/maps/api/js?key=`S{API Key}`&libraries=places`;
+        document.head.appendChild(s);
+
+
+        s.addEventListener("load", () => {
+            //script has loaded
+            console.log("script has loaded");
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: {
+                    lat: 32.7767,
+                    lng: -96.7970
+                },
+                zoom: 13,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+
+            });
+
+            // marker
+            marker = new google.maps.Marker({
+                position: {
+                    lat: 32.7767,
+                    lng: -96.7970
+                },
+                map: map,
+                draggable: true
+            });
+
+            // searchBox
+            let searchBox = new google.maps.places.SearchBox(document.getElementById("mapsearch"));
+
+            // Market change after place is entered in searchBox
+            google.maps.event.addListener(searchBox, 'places_changed', function() {
+                // console.log(saarchBox.getPlaces())
+                let places = searchBox.getPlaces();
+
+                // bound
+                let bounds = new google.maps.LatLngBounds();
+                let i, place;
+
+                for (i = 0; place = places[i]; i++) {
+                    // console.log(place.geometry.location)
+                    bounds.extend(place.geometry.location);
+                    // set market new position
+                    marker.setPosition(place.geometry.location);
+                }
+
+                map.fitBounds(bounds);
+                map.setZoom(15);
+            })
+
+        });
+    });
+    </script>
+</body>
+
+</html>
